@@ -25,6 +25,7 @@ async def main():
         clean_info = info.replace('*', '')
 
         print(clean_info)
+        print(5959)
 
         # title = clean_info[:clean_info.index('💵')]
         # print(title.replace('\n', ''))
