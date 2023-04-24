@@ -1,5 +1,6 @@
 from telethon import TelegramClient, events
-from telethon.tl.types import MessageEntityTextUrl, InputMessagesFilterDocument
+import logging
+from telethon.tl.types import MessageEntityTextUrl
 from datetime import datetime, timedelta
 
 api_id = 27348907
@@ -8,12 +9,32 @@ api_hash = 'f6a5b11160bb0efd31fc297d10a6864d'
 client = TelegramClient('anon', api_id, api_hash)
 client.start()
 
+chat_id = -1001237045898
+words = ['сука', 'пішов нахуй', 'ти', 'блять', 'qq']
+
+
+@client.on(events.ChatAction(chats=chat_id))
+@client.on(events.NewMessage(chats=chat_id))
+async def filterr(event):
+    for i in words:
+        if i in str(event.raw_text).lower():
+            user = event.sender
+            await event.message.delete()
+            await event.reply(f"@{user.username}, використання матерних слів не є прийнятним. Будь ласка, поводьтеся адекватно.")
+
+
+@client.on(events.ChatAction(chats=chat_id))
+@client.on(events.NewMessage(chats=chat_id))
+async def my_event_handler(event):
+    if 'hello' in str(event.raw_text).lower():
+        await event.reply('hi!')
+
 
 async def main():
     channel = await client.get_entity('https://t.me/WORKIN_LVIV')
 
     now = datetime.now()
-    # print(now.strftime("%Y-%m-%d"))
+    print(now.strftime("%Y-%m-%d"))
 
     two_days = timedelta(2)
 
@@ -57,5 +78,8 @@ async def main():
         else:
             pass
 
+
 with client:
     client.loop.run_until_complete(main())
+
+client.run_until_disconnected()
