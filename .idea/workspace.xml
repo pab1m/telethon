@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f905e706-bab8-4885-bfc9-97ce36ca15f6" name="Changes" comment="version2">
-      <change afterPath="$PROJECT_DIR$/filter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/filter2.py" afterDir="false" />
+    <list default="true" id="f905e706-bab8-4885-bfc9-97ce36ca15f6" name="Changes" comment="version3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anon.session" beforeDir="false" afterPath="$PROJECT_DIR$/anon.session" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job.py" beforeDir="false" afterPath="$PROJECT_DIR$/job.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter2.py" beforeDir="false" afterPath="$PROJECT_DIR$/filter2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,21 +31,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/st_pavlo/PycharmProjects/test",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/st_pavlo/PycharmProjects/test&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.filter2">
     <configuration name="filter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tltn" />
@@ -157,7 +156,12 @@
       <workItem from="1681980250663" duration="10468000" />
       <workItem from="1682316490234" duration="2032000" />
       <workItem from="1682319017454" duration="10504000" />
-      <workItem from="1682333310245" duration="6380000" />
+      <workItem from="1682333310245" duration="6431000" />
+      <workItem from="1682402846904" duration="61000" />
+      <workItem from="1682403017765" duration="2886000" />
+      <workItem from="1682406032220" duration="3778000" />
+      <workItem from="1682411822054" duration="4340000" />
+      <workItem from="1682420208490" duration="3208000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1681993460069</created>
@@ -173,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681993587507</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="version3">
+      <created>1682339826065</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682339826066</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,10 +204,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new" />
     <MESSAGE value="version2" />
-    <option name="LAST_COMMIT_MESSAGE" value="version2" />
+    <MESSAGE value="version3" />
+    <option name="LAST_COMMIT_MESSAGE" value="version3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/tltn$filter2.coverage" NAME="filter2 Coverage Results" MODIFIED="1682339756155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tltn$filter2.coverage" NAME="filter2 Coverage Results" MODIFIED="1682422818351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tltn$main.coverage" NAME="main Coverage Results" MODIFIED="1682335395502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tltn$job.coverage" NAME="job Coverage Results" MODIFIED="1682324588388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tltn$filter.coverage" NAME="filter Coverage Results" MODIFIED="1682336064784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

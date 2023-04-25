@@ -1,9 +1,11 @@
-import openpyxl as openpyxl
 from telethon import TelegramClient, events
 import xlsxwriter
 import logging
 from telethon.tl.types import MessageEntityTextUrl
 from datetime import datetime, timedelta
+import pandas as pd
+from openpyxl import load_workbook
+
 
 api_id = 27348907
 api_hash = 'f6a5b11160bb0efd31fc297d10a6864d'
@@ -12,8 +14,9 @@ client = TelegramClient('anon', api_id, api_hash)
 client.start()
 
 chat_id = -1001237045898
-words = ['сука', 'пішов нахуй', 'ти', 'блять', 'qq']
+words = ['сука', 'пішов нахуй', 'блять', 'qq']
 
+row = 0
 
 @client.on(events.ChatAction(chats=chat_id))
 @client.on(events.NewMessage(chats=chat_id))
@@ -23,38 +26,83 @@ async def filterr(event):
             user = event.sender
             await event.message.delete()
             await event.reply(f"@{user.username}, використання матерних слів не є прийнятним. Будь ласка, поводьтеся адекватно.")
+            return
 
-
-@client.on(events.ChatAction(chats=chat_id))
-@client.on(events.NewMessage(chats=chat_id))
-async def my_event_handler(event):
-    if 'hello' in str(event.raw_text).lower():
-        await event.reply('hi!')
-
-
-@client.on(events.ChatAction(chats=chat_id))
-@client.on(events.NewMessage(chats=chat_id))
-async def main(event):
     channel = await client.get_entity(chat_id)
-
     messages = await client.get_messages(channel, limit=1)
 
+    data = []
     for message in messages:
-        info = str(message.text)
-        print(info)
+        text = str(message.text)
+
+        # data = text.split('\n')
+        data.append(text)
+        print(data)
+
+    if 'hello' in str(event.raw_text).lower():
+        await event.reply('hi!')
+        # print(event.raw_text)
 
 
-    book = xlsxwriter.Workbook(r"/home/st_pavlo/PycharmProjects/tltn/data.xlsx")
-    page = book.add_worksheet("message")
 
-    row = 0
-    column = 0
+# @client.on(events.ChatAction(chats=chat_id))
+# @client.on(events.NewMessage(chats=chat_id))
+# async def my_event_handler(event):
+#     if 'hello' in str(event.raw_text).lower():
+#         await event.reply('hi!')
+#
+#
+# @client.on(events.ChatAction(chats=chat_id))
+# @client.on(events.NewMessage(chats=chat_id))
+# async def main(event):
+#     global row
+#     channel = await client.get_entity(chat_id)
+#
+#     messages = await client.get_messages(channel, limit=1)
+#
+#     data = []
+#     for message in messages:
+#         text = str(message.text)
+#
+#         # data = text.split('\n')
+#         data.append(text)
+#         print(data)
 
-    page.set_column("A:A", 50)
 
 
-    page.write(row, column, info)
-    book.close()
+    # excel_file = 'test2.xlsx'
+    #
+    # # Відкриття конкретного листа
+    # excel_sheet = 'test'
+    #
+    # # Завантаження даних з листа
+    # wb = load_workbook(excel_file)
+    # ws = wb[excel_sheet]
+    #
+    # # Додавання нових даних до листа
+    # # new_data = [['Column1', 'Column2'], [1, 4], [2, 5], [3, 6]]
+    # # for row in data:
+    # # ws.append(text)
+    # #
+    # # # Збереження змін до Excel файлу
+    # # wb.save(excel_file)
+    #
+    # # new_data = [['Column1', 'Column2']]
+    # # for row in data:
+    # #     new_data.append(row.split(','))  # перетворення рядка на список даних
+    #
+    # new_data = [['Column1', 'Column2'], [1, 4], [2, 5], [3, 6]]
+    # for row in new_data:
+    #     ws.append(row)
+    #
+    # # Збереження змін до Excel файлу
+    # wb.save(excel_file)
+
+
+
+
+
+
 
     #     clean_info = info.replace('*', '')
     #
